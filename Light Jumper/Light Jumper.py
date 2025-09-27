@@ -559,77 +559,130 @@ class Level:
             self.goal = Goal(goal_x, goal_y)
                  
         elif self.level_num == 6:
-            # Level 6 - Final challenge with narrow platforms and many dangers
+            # Level 6 - Tiny moving platforms with traps below
             self.platforms.extend([
-                Platform(200, 550, 80, is_moving=True),
-                Platform(450, 500, 80),
-                Platform(700, 450, 80, is_moving=True),
-                Platform(150, 400, 80),
-                Platform(400, 350, 80, is_moving=True),
-                Platform(650, 300, 80),
-                Platform(300, 250, 80, is_moving=True),
-                Platform(550, 200, 80),
-                Platform(200, 150, 80, is_moving=True),
+                Platform(200, 550, 60, is_moving=True),
+                Platform(400, 500, 60, is_moving=True),
+                Platform(600, 450, 60, is_moving=True),
+                Platform(800, 400, 60, is_moving=True),
+                Platform(500, 300, 60, is_moving=True),
             ])
             self.dangers.extend([
-                Danger(350, 450, 80, 20, is_moving=True),
-                Danger(500, 400, 80, 20),
-                Danger(250, 350, 80, 20, is_moving=True),
-                Danger(600, 250, 80, 20),
-                Danger(350, 200, 80, 20, is_moving=True),
+                Danger(200, 570, 150, 20, is_moving=True),
+                Danger(450, 520, 120, 20),
+                Danger(650, 470, 100, 20, is_moving=True),
             ])
-            goal_x = random.randint(700, SCREEN_WIDTH - 100)
-            goal_y = random.randint(40, 120)
-            self.goal = Goal(goal_x, goal_y)
-                 
+            self.goal = Goal(850, 120)
+
         elif self.level_num == 7:
-            # Level 7 - Final challenge with narrow platforms and many dangers
+            # Level 7 - Zigzag with criss-cross dangers
             self.platforms.extend([
-                Platform(200, 550, 80, is_moving=True),
-                Platform(450, 500, 80),
-                Platform(700, 450, 80, is_moving=True),
-                Platform(150, 400, 80),
-                Platform(400, 350, 80, is_moving=True),
-                Platform(650, 300, 80),
-                Platform(300, 250, 80, is_moving=True),
-                Platform(550, 200, 80),
-                Platform(200, 150, 80, is_moving=True),
+                Platform(150, 550, 70),
+                Platform(350, 480, 70, is_moving=True),
+                Platform(550, 410, 70),
+                Platform(750, 340, 70, is_moving=True),
+                Platform(500, 250, 70),
             ])
             self.dangers.extend([
-                Danger(350, 450, 80, 20, is_moving=True),
-                Danger(500, 400, 80, 20),
-                Danger(250, 350, 80, 20, is_moving=True),
-                Danger(600, 250, 80, 20),
-                Danger(350, 200, 80, 20, is_moving=True),
+                Danger(250, 530, 100, 20, is_moving=True),
+                Danger(450, 460, 120, 20, is_moving=True),
+                Danger(650, 390, 140, 20),
+                Danger(400, 220, 120, 20, is_moving=True),
             ])
-            goal_x = random.randint(700, SCREEN_WIDTH - 100)
-            goal_y = random.randint(40, 120)
-            self.goal = Goal(goal_x, goal_y)
-                 
+            self.goal = Goal(780, 100)
+
         elif self.level_num == 8:
-            # Level 8 - Final challenge with narrow platforms and many dangers
+            # Level 8 - Narrow stacked platforms with heavy dangers
             self.platforms.extend([
-                Platform(200, 550, 80, is_moving=True),
-                Platform(450, 500, 80),
-                Platform(700, 450, 80, is_moving=True),
-                Platform(150, 400, 80),
-                Platform(400, 350, 80, is_moving=True),
-                Platform(650, 300, 80),
-                Platform(300, 250, 80, is_moving=True),
-                Platform(550, 200, 80),
-                Platform(200, 150, 80, is_moving=True),
+                Platform(250, 550, 60, is_moving=True),
+                Platform(450, 480, 60),
+                Platform(650, 410, 60, is_moving=True),
+                Platform(350, 340, 60),
+                Platform(550, 270, 60, is_moving=True),
+                Platform(750, 200, 60),
             ])
             self.dangers.extend([
-                Danger(350, 450, 80, 20, is_moving=True),
-                Danger(500, 400, 80, 20),
-                Danger(250, 350, 80, 20, is_moving=True),
-                Danger(600, 250, 80, 20),
-                Danger(350, 200, 80, 20, is_moving=True),
+                Danger(200, 520, 500, 20, is_moving=True),
+                Danger(300, 450, 400, 20),
+                Danger(400, 380, 300, 20, is_moving=True),
+                Danger(500, 310, 200, 20),
+                Danger(600, 240, 100, 20, is_moving=True),
             ])
-            goal_x = random.randint(700, SCREEN_WIDTH - 100)
-            goal_y = random.randint(40, 120)
-            self.goal = Goal(goal_x, goal_y)
-            
+            self.goal = Goal(800, 80)
+
+        elif self.level_num == 9:
+            # Level 9 - Tiny platforms + many dangers
+            self.platforms.extend([
+                Platform(200, 550, 60, is_moving=True),
+                Platform(400, 500, 60),
+                Platform(600, 450, 60, is_moving=True),
+                Platform(800, 400, 60),
+                Platform(500, 300, 60, is_moving=True),
+                Platform(300, 200, 60),
+            ])
+            self.dangers.extend([
+                Danger(250, 520, 100, 20, is_moving=True),
+                Danger(450, 470, 120, 20),
+                Danger(700, 350, 100, 20, is_moving=True),
+            ])
+            self.goal = Goal(850, 100)
+
+        elif self.level_num == 10:
+            # Level 10 - Criss-cross moving platforms
+            self.platforms.extend([
+                Platform(200, 550, 70, is_moving=True),
+                Platform(400, 500, 70, is_moving=True),
+                Platform(600, 450, 70, is_moving=True),
+                Platform(800, 400, 70, is_moving=True),
+                Platform(500, 300, 70, is_moving=True),
+            ])
+            self.dangers.extend([
+                Danger(300, 480, 80, 20, is_moving=True),
+                Danger(500, 380, 80, 20, is_moving=True),
+                Danger(700, 280, 80, 20, is_moving=True),
+            ])
+            self.goal = Goal(850, 150)
+
+        elif self.level_num == 11:
+            # Level 11 - Platforms vanish into voids
+            self.platforms.extend([
+                Platform(150, 550, 80),
+                Platform(350, 500, 60, is_moving=True),
+                Platform(550, 420, 60),
+                Platform(750, 340, 60, is_moving=True),
+                Platform(400, 250, 60),
+            ])
+            self.dangers.extend([
+                Danger(200, 520, 150, 20, is_moving=True),
+                Danger(600, 390, 150, 20),
+                Danger(450, 220, 150, 20, is_moving=True),
+            ])
+            self.goal = Goal(780, 120)
+
+        elif self.level_num == 12:
+            # Level 12 - Narrow corridors of dangers
+            self.platforms.extend([
+                Platform(200, 550, 60, is_moving=True),
+                Platform(400, 450, 60, is_moving=True),
+                Platform(600, 350, 60, is_moving=True),
+                Platform(800, 250, 60, is_moving=True),
+            ])
+            self.dangers.extend([
+                Danger(250, 520, 500, 20, is_moving=True),
+                Danger(250, 420, 500, 20, is_moving=True),
+                Danger(250, 320, 500, 20, is_moving=True),
+            ])
+            self.goal = Goal(850, 100)
+
+        elif self.level_num == 13:
+            # Level 13 - Pure chaos
+            for i in range(5):
+                self.platforms.append(Platform(200 + i*150, 550 - i*80, 50, is_moving=True))
+                self.dangers.append(Danger(180 + i*150, 530 - i*80, 120, 20, is_moving=True))
+            self.goal = Goal(900, 80)
+
+
+
         else:
             # For levels beyond 5, generate random challenging levels
             self.generate_random_level()
@@ -711,7 +764,7 @@ class Game:
     def __init__(self):
         self.clock = pygame.time.Clock()
         self.level_num = 1
-        self.max_level = 8
+        self.max_level = 13
         self.game_state = "start"
         self.start_button = Button(SCREEN_WIDTH//2 - 150, SCREEN_HEIGHT//2 + 50, 300, 60, "START GAME", pixel_font_medium)
         self.reset_game()
